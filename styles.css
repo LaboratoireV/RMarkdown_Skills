@@ -1,9 +1,9 @@
 :root {
   --ink: #12383b;
   --ink-deep: #092a2d;
-  --ink-soft: #526b6d;
+  --ink-soft: #50686b;
   --paper: #f3efe6;
-  --paper-deep: #e9e1d3;
+  --paper-deep: #ebe4d7;
   --surface: #fffdf8;
   --surface-soft: #f9f6ef;
   --teal: #0b6b66;
@@ -349,7 +349,7 @@ h1 {
   border-radius: var(--radius-lg);
   background: rgba(255, 253, 248, 0.90);
   box-shadow: var(--shadow-lg);
-  transform: rotate(1.2deg);
+  transform: none;
 }
 
 .document-preview::after {
@@ -537,7 +537,7 @@ h1 {
 
 .path-step {
   display: flex;
-  min-height: 340px;
+  min-height: 300px;
   flex-direction: column;
   padding: 23px;
   border: 1px solid var(--line);
@@ -625,7 +625,7 @@ h1 {
   --guide-accent: var(--teal);
   --guide-pale: var(--mint-pale);
   display: flex;
-  min-height: 500px;
+  min-height: 430px;
   flex-direction: column;
   padding: clamp(27px, 4vw, 40px);
   border: 1px solid var(--line);
@@ -751,6 +751,96 @@ h1 {
 .guide-link:hover {
   filter: brightness(0.90);
   transform: translateY(-2px);
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.track-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 253, 248, 0.76);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.track-card:hover,
+.track-card:focus-within {
+  border-color: rgba(11, 107, 102, 0.42);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-3px);
+}
+
+.track-label {
+  display: inline-flex;
+  margin-bottom: 20px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  color: var(--teal-dark);
+  background: var(--mint);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.track-card h3 {
+  margin-bottom: 9px;
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.track-card p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.track-route {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.track-route li {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding-left: 23px;
+  border-top: 1px solid var(--line);
+  font-size: 0.84rem;
+  font-weight: 760;
+}
+
+.track-route li::before {
+  position: absolute;
+  top: 18px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  content: "";
+  background: var(--coral);
+}
+
+.track-route a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  text-decoration-color: rgba(11, 107, 102, 0.35);
+  text-underline-offset: 4px;
+}
+
+.track-route .track-zh {
+  color: var(--teal-dark);
+  font-size: 0.78rem;
+  white-space: nowrap;
 }
 
 .concepts-wrap {
@@ -1006,6 +1096,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+
   .guide-card {
     min-height: auto;
   }
@@ -1092,6 +1186,10 @@ h1 {
   .concept-grid,
   .concept-flow {
     grid-template-columns: 1fr;
+  }
+
+  .track-card {
+    padding: 24px 21px;
   }
 
   .path-step {
