@@ -1,42 +1,66 @@
 # The V Lab R Markdown Learning Hub
 
-一个面向 R Markdown 初学者与数据分析学习者的双语学习网站。网站通过中英文教程介绍 `.Rmd` 文档结构、YAML、Markdown、代码块、行内 R、参数化报告，以及 `knitr` 与 `knitr::kable()` 的主要用法。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-## 在线网站
+A bilingual learning website for R Markdown beginners and data-analysis learners. The guides explain how to combine narrative, R code, computed results, plots, and tables in reproducible reports, with detailed coverage of `knitr` and `knitr::kable()`.
 
-访问 [The V Lab R Markdown Learning Hub](https://laboratoirev.github.io/RMarkdown_Skills/) 选择英文版或中文版教程。
+## Live website
 
-## 教程
+Visit the [R Markdown Learning Hub](https://laboratoirev.github.io/RMarkdown_Skills/) and choose either the English or Chinese guide.
 
-- [English guide](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_en.html)：R Markdown、knitr 与 `kable()` 的英文实践教程。
-- [中文教程](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_zh.html)：R Markdown 主要用法及 knitr、`kable()` 中文详解。
+## Guides
 
-## 网站文件
+- [English guide](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_en.html) — a practical introduction to R Markdown, `knitr`, and `kable()`.
+- [中文教程](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_zh.html) — a complete Chinese guide to the same topics.
 
-- `index.html`：双语学习网站首页与教程入口。
-- `r_markdown_guide_en.html` / `r_markdown_guide_zh.html`：自包含的英文与中文教程。
-- `styles.css`：学习中心首页的响应式样式。
-- `guide-styles.css`：中英文教程页共用的阅读、目录与打印样式。
-- `includes/vlab-brand.html`：教程页共用的 The V Lab 品牌返回入口。
-- `og.png`：网站社交分享预览图。
-- `.nojekyll`：让 GitHub Pages 原样发布静态文件。
-- `render.R`：重新渲染项目根目录中的全部 Rmd。
-- `build-sites.sh`：为 The V Lab 的站点托管生成静态发布包。
+## What you will learn
 
-## 重新渲染
+- the anatomy of an `.Rmd` document: YAML, Markdown, and R code chunks;
+- inline R code, figures, tables, and parameterized reports;
+- the rendering pipeline from `.Rmd` through `knitr` and Pandoc to HTML;
+- chunk options for controlling code, output, messages, warnings, figures, and caching;
+- portable tables with `knitr::kable()`, including captions, alignment, numeric formatting, missing values, and HTML output; and
+- reproducibility practices for paths, environments, dependencies, and clean rendering.
 
-`.Rmd` 源文件只保存在本地工作副本中，并通过 `.gitignore` 排除，不上传到 GitHub。生成的 HTML 会保留教学代码和执行结果。
+> **Terminology:** `knitr` is an R package. `kable()` is a function exported by `knitr`, not a separate package. For advanced table styling, `kableExtra` is an optional extension package.
 
-安装依赖：
+## Repository structure
+
+| Path | Purpose |
+|---|---|
+| `index.html` | Bilingual learning-hub homepage |
+| `r_markdown_guide_en.html` | Self-contained English tutorial |
+| `r_markdown_guide_zh.html` | Self-contained Chinese tutorial |
+| `styles.css` | Responsive homepage styles |
+| `guide-styles.css` | Shared reading, table-of-contents, and print styles for both guides |
+| `includes/vlab-brand.html` | Shared The V Lab home link used while rendering the guides |
+| `og.png` | Social-sharing preview image |
+| `.nojekyll` | Publishes the static files unchanged on GitHub Pages |
+| `render.R` | Renders every local R Markdown source file in the project root |
+| `build-sites.sh` | Creates the static bundle used by The V Lab site hosting |
+
+## Render locally
+
+Install the required packages:
 
 ```r
 install.packages(c("rmarkdown", "knitr"))
 ```
 
-在项目目录运行：
+From the project directory, run:
 
 ```bash
 Rscript render.R
 ```
 
-渲染需要 Pandoc；RStudio 已自带 Pandoc。
+Rendering also requires Pandoc. RStudio includes a compatible Pandoc installation.
+
+## Source-file policy
+
+The `.Rmd` source files remain in the local working copy and are excluded by `.gitignore`; they are intentionally not uploaded to GitHub. The generated HTML files retain the instructional code and executed results required by the published tutorials.
+
+## Publishing
+
+GitHub Pages publishes the site from the `main` branch at:
+
+<https://laboratoirev.github.io/RMarkdown_Skills/>
