@@ -33,7 +33,7 @@
 | `r_markdown_guide_zh.html` | 自包含中文教程 |
 | `styles.css` | 首页响应式样式 |
 | `guide-styles.css` | 两份教程共用的阅读、目录与打印样式 |
-| `includes/vlab-brand.html` | 渲染教程时使用的 The V Lab 品牌首页链接 |
+| `includes/vlab-brand.html` / `includes/vlab-footer.html` | 渲染教程时使用的 The V Lab 共用页首与页脚 |
 | `og.png` | 网站社交分享预览图 |
 | `.nojekyll` | 让 GitHub Pages 原样发布静态文件 |
 | `render.R` | 渲染项目根目录中的全部本地 R Markdown 源文件 |

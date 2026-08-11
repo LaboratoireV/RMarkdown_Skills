@@ -33,7 +33,7 @@ Visit the [R Markdown Learning Hub](https://laboratoirev.github.io/RMarkdown_Ski
 | `r_markdown_guide_zh.html` | Self-contained Chinese tutorial |
 | `styles.css` | Responsive homepage styles |
 | `guide-styles.css` | Shared reading, table-of-contents, and print styles for both guides |
-| `includes/vlab-brand.html` | Shared The V Lab home link used while rendering the guides |
+| `includes/vlab-brand.html` / `includes/vlab-footer.html` | Shared The V Lab header and footer used while rendering the guides |
 | `og.png` | Social-sharing preview image |
 | `.nojekyll` | Publishes the static files unchanged on GitHub Pages |
 | `render.R` | Renders every local R Markdown source file in the project root |
