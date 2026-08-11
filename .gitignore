@@ -1,2 +1,22 @@
+# System and local R state
+.DS_Store
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+.Rproj.user/
+
+# Local dependencies and tools
+.Rlib/
+.tools/
+dist/
+.wrangler/
+
 # R Markdown source files are intentionally not published.
 *.[Rr][Mm][Dd]
+
+# R Markdown intermediate output
+*_cache/
+*_files/
+*.utf8.md
+*.knit.md

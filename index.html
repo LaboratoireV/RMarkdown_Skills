@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bilingual R Markdown learning hub from The V Lab, with practical guides to reproducible reports, knitr, and knitr::kable().">
+  <meta name="theme-color" content="#12383b">
+  <meta name="color-scheme" content="light">
+
+  <link rel="canonical" href="https://laboratoirev.github.io/RMarkdown_Skills/">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The V Lab">
+  <meta property="og:title" content="R Markdown Learning Hub | The V Lab">
+  <meta property="og:description" content="Learn to combine narrative, R code, results, figures, and clear tables in one reproducible report—in English or Chinese.">
+  <meta property="og:url" content="https://laboratoirev.github.io/RMarkdown_Skills/">
+  <meta property="og:image" content="https://laboratoirev.github.io/RMarkdown_Skills/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The V Lab R Markdown Learning Hub">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="R Markdown Learning Hub | The V Lab">
+  <meta name="twitter:description" content="A bilingual practical guide to R Markdown, knitr, and knitr::kable().">
+  <meta name="twitter:image" content="https://laboratoirev.github.io/RMarkdown_Skills/og.png">
+
+  <title>R Markdown Learning Hub | The V Lab</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to learning content <span lang="zh-CN">/ 跳到学习内容</span>
+  </a>
+
+  <div class="header-wrap">
+    <header class="site-header shell">
+      <a class="brand" href="index.html" aria-label="The V Lab R Markdown Learning Hub home" aria-current="page">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span>The V Lab</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#learning-path">Learning path</a>
+        <a href="#guides">Guides <span lang="zh-CN">/ 教程</span></a>
+        <a href="#concepts">Key concepts</a>
+      </nav>
+
+      <a class="repo-link" href="https://github.com/LaboratoireV/RMarkdown_Skills" aria-label="View the R Markdown Skills repository on GitHub">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+  </div>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero shell" aria-labelledby="page-title">
+      <div class="hero-copy-wrap">
+        <p class="eyebrow">Bilingual reproducible reporting guide <span lang="zh-CN">· 双语可复现报告指南</span></p>
+        <h1 id="page-title">Build reports where code and story stay together.</h1>
+        <p class="hero-zh" lang="zh-CN">让代码、分析与叙事始终同步。</p>
+        <p class="hero-copy">
+          Learn the essential R Markdown workflow—from YAML and executable chunks to controlled output, figures, and publication-ready tables with <code>knitr::kable()</code>.
+          <span lang="zh-CN">从 YAML 与可执行代码块开始，掌握输出控制、图形，以及使用 <code>knitr::kable()</code> 制作清晰表格的完整工作流。</span>
+        </p>
+
+        <div class="hero-actions" aria-label="Choose a guide language">
+          <a class="button button-primary" href="r_markdown_guide_en.html" hreflang="en">
+            Read in English <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="button button-secondary" href="r_markdown_guide_zh.html" hreflang="zh-CN" lang="zh-CN">
+            阅读中文版 <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <ul class="hero-notes" aria-label="Guide highlights">
+          <li>Self-paced</li>
+          <li>Runnable R examples</li>
+          <li><span lang="zh-CN">中英双语</span></li>
+        </ul>
+      </div>
+
+      <aside class="document-preview" aria-label="An R Markdown document moving from source to finished report">
+        <div class="preview-toolbar" aria-hidden="true">
+          <span></span><span></span><span></span>
+          <strong>report.Rmd</strong>
+        </div>
+        <div class="preview-body">
+          <p class="preview-label">ONE SOURCE, REPEATABLE RESULT</p>
+          <pre aria-label="Example R Markdown source"><code><span class="code-muted">---</span>
+<span class="code-key">title:</span> <span class="code-value">"My analysis"</span>
+<span class="code-key">output:</span> html_document
+<span class="code-muted">---</span>
+
+<span class="code-heading"># Results</span>
+The mean is <span class="code-inline">`r mean(x)`</span>.
+
+<span class="code-chunk">```{r summary}</span>
+knitr::kable(results)
+<span class="code-chunk">```</span></code></pre>
+
+          <ol class="render-route" aria-label="Rendering workflow">
+            <li><span>01</span><strong>Write</strong><small>Narrative + code</small></li>
+            <li><span>02</span><strong>Knit</strong><small>Execute + capture</small></li>
+            <li><span>03</span><strong>Share</strong><small>One clear HTML</small></li>
+          </ol>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section shell" id="learning-path" aria-labelledby="path-title">
+      <div class="section-intro">
+        <div>
+          <p class="section-kicker">Learning path <span lang="zh-CN">· 学习路径</span></p>
+          <h2 id="path-title">From blank file to reproducible report.</h2>
+        </div>
+        <p>
+          Follow four connected stages, then return to any topic when your project needs it.
+          <span lang="zh-CN">沿着四个相互衔接的阶段学习，也可以根据项目需要随时查阅单个主题。</span>
+        </p>
+      </div>
+
+      <ol class="path-grid">
+        <li class="path-step">
+          <span class="step-number">01</span>
+          <p class="step-action">Compose <span lang="zh-CN">· 编写</span></p>
+          <h3>Structure the document</h3>
+          <p>Combine YAML metadata, Markdown prose, headings, links, mathematics, and parameters in one plain-text source.</p>
+          <a class="step-link" href="r_markdown_guide_en.html#anatomy-of-an-.rmd-file">Explore document anatomy <span aria-hidden="true">→</span></a>
+        </li>
+
+        <li class="path-step">
+          <span class="step-number">02</span>
+          <p class="step-action">Compute <span lang="zh-CN">· 计算</span></p>
+          <h3>Make analysis executable</h3>
+          <p>Add named R chunks and inline expressions so results, plots, and narrative values update from the same analysis.</p>
+          <a class="step-link" href="r_markdown_guide_en.html#a-small-reproducible-analysis">See a worked analysis <span aria-hidden="true">→</span></a>
+        </li>
+
+        <li class="path-step">
+          <span class="step-number">03</span>
+          <p class="step-action">Control <span lang="zh-CN">· 控制</span></p>
+          <h3>Direct <code>knitr</code></h3>
+          <p>Use chunk options to decide what runs, what appears, how figures render, and when caching is safe.</p>
+          <a class="step-link" href="r_markdown_guide_en.html#knitr-in-depth">Study chunk options <span aria-hidden="true">→</span></a>
+        </li>
+
+        <li class="path-step">
+          <span class="step-number">04</span>
+          <p class="step-action">Present <span lang="zh-CN">· 呈现</span></p>
+          <h3>Build readable tables</h3>
+          <p>Turn data frames and summaries into portable tables with captions, labels, alignment, rounding, and safe HTML.</p>
+          <a class="step-link" href="r_markdown_guide_en.html#knitrkable-in-depth"><code>kable()</code> in depth <span aria-hidden="true">→</span></a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section guide-section" id="guides" aria-labelledby="guides-title">
+      <div class="shell">
+        <div class="section-intro">
+          <div>
+            <p class="section-kicker">Choose your edition <span lang="zh-CN">· 选择语言</span></p>
+            <h2 id="guides-title">One curriculum, two complete guides.</h2>
+          </div>
+          <p>
+            Both editions follow the same practical sequence and contain the same runnable examples. Choose the language that lets you focus on the ideas.
+            <span lang="zh-CN">两个版本采用相同的学习顺序和可运行示例，请选择最适合你的语言。</span>
+          </p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="guide-card guide-card-en">
+            <div class="guide-topline">
+              <span class="guide-language" aria-hidden="true">EN</span>
+              <div class="guide-meta">
+                <span>Complete guide</span>
+                <span>Self-paced</span>
+              </div>
+            </div>
+            <p class="guide-overline">English edition</p>
+            <h3>R Markdown: A Practical Guide to <code>knitr</code> and <code>kable()</code></h3>
+            <p class="guide-description">Build a reproducible report from first principles, then go deeper into code execution, caching, table output, and dependable rendering.</p>
+            <ul class="topic-list" aria-label="English guide topics">
+              <li>YAML &amp; Markdown</li>
+              <li>Chunk options</li>
+              <li>Inline R</li>
+              <li>Figures</li>
+              <li><code>kable()</code> tables</li>
+              <li>Reproducibility</li>
+            </ul>
+            <a class="guide-link" href="r_markdown_guide_en.html" hreflang="en">
+              Open the English guide <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="guide-card guide-card-zh" lang="zh-CN">
+            <div class="guide-topline">
+              <span class="guide-language" aria-hidden="true">中</span>
+              <div class="guide-meta">
+                <span>完整教程</span>
+                <span>自主学习</span>
+              </div>
+            </div>
+            <p class="guide-overline">中文版本</p>
+            <h3>R Markdown 主要用法：<code>knitr</code> 与 <code>kable()</code> 详解</h3>
+            <p class="guide-description">从基础结构开始创建可复现报告，再深入学习代码执行、缓存、表格输出与可靠渲染。</p>
+            <ul class="topic-list" aria-label="中文教程主题">
+              <li>YAML 与 Markdown</li>
+              <li>代码块选项</li>
+              <li>行内 R</li>
+              <li>图形输出</li>
+              <li><code>kable()</code> 表格</li>
+              <li>可复现性</li>
+            </ul>
+            <a class="guide-link" href="r_markdown_guide_zh.html" hreflang="zh-CN">
+              打开中文教程 <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell concepts-wrap" id="concepts" aria-labelledby="concepts-title">
+      <div class="concepts-panel">
+        <div class="concepts-header">
+          <div>
+            <p class="section-kicker section-kicker-light">Key concepts <span lang="zh-CN">· 核心概念</span></p>
+            <h2 id="concepts-title">Four pieces, one publishing workflow.</h2>
+          </div>
+          <p>
+            Each tool has a distinct job. Understanding those boundaries makes reports easier to debug, reuse, and share.
+            <span lang="zh-CN">每个工具各司其职；理解这些边界，会让报告更容易调试、复用与分享。</span>
+          </p>
+        </div>
+
+        <ol class="concept-flow" aria-label="R Markdown publishing pipeline">
+          <li>
+            <span class="concept-number">01</span>
+            <strong>R Markdown</strong>
+            <small>The source <span lang="zh-CN">· 源文件</span></small>
+          </li>
+          <li>
+            <span class="concept-number">02</span>
+            <strong><code>knitr</code></strong>
+            <small>The engine <span lang="zh-CN">· 执行引擎</span></small>
+          </li>
+          <li>
+            <span class="concept-number">03</span>
+            <strong>Pandoc</strong>
+            <small>The converter <span lang="zh-CN">· 格式转换</span></small>
+          </li>
+          <li>
+            <span class="concept-number">04</span>
+            <strong>HTML</strong>
+            <small>The deliverable <span lang="zh-CN">· 最终成果</span></small>
+          </li>
+        </ol>
+
+        <div class="concept-grid">
+          <article class="concept-card">
+            <span class="concept-symbol" aria-hidden="true">.Rmd</span>
+            <h3>One source of truth</h3>
+            <p>Keep explanation, code, and output instructions together so every render starts from the same documented analysis.</p>
+          </article>
+          <article class="concept-card">
+            <span class="concept-symbol" aria-hidden="true">{r}</span>
+            <h3>Intentional execution</h3>
+            <p><code>knitr</code> evaluates chunks in order and captures their text, tables, messages, and figures for the next stage.</p>
+          </article>
+          <article class="concept-card">
+            <span class="concept-symbol" aria-hidden="true">tbl</span>
+            <h3>A function, not a package</h3>
+            <p><code>kable()</code> is a table-formatting function exported by <code>knitr</code>. The full name is <code>knitr::kable()</code>.</p>
+          </article>
+          <article class="concept-card">
+            <span class="concept-symbol" aria-hidden="true">↗</span>
+            <h3>Portable output</h3>
+            <p>Pandoc converts the intermediate document into HTML, Word, PDF, or another format selected in YAML.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div>
+      <a class="footer-brand" href="index.html" aria-label="The V Lab R Markdown Learning Hub home">
+        <span class="brand-mark brand-mark-small" aria-hidden="true">V</span>
+        <span>The V Lab</span>
+      </a>
+      <p>Practical, bilingual learning for reproducible analysis.</p>
+      <p lang="zh-CN">面向可复现分析的实用双语学习资源。</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="r_markdown_guide_en.html" hreflang="en">English guide</a>
+      <a href="r_markdown_guide_zh.html" hreflang="zh-CN" lang="zh-CN">中文教程</a>
+      <a href="https://github.com/LaboratoireV/RMarkdown_Skills">GitHub repository</a>
+    </nav>
+  </footer>
+</body>
+</html>

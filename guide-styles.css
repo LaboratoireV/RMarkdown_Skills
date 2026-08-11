@@ -1,0 +1,410 @@
+:root {
+  --guide-navy: #17324d;
+  --guide-navy-soft: #244b6d;
+  --guide-teal: #0b6b66;
+  --guide-teal-dark: #07534f;
+  --guide-ink: #203040;
+  --guide-muted: #526579;
+  --guide-paper: #f6f9fb;
+  --guide-surface: #ffffff;
+  --guide-line: #d7e1e8;
+  --guide-teal-pale: #eaf6f4;
+  --guide-blue-pale: #edf5fb;
+  --guide-amber-pale: #fff5df;
+  --guide-rose-pale: #fff0ef;
+  --guide-focus: #c2410c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--guide-ink);
+  background: var(--guide-paper);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Hiragino Sans GB", "Microsoft YaHei", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+html[lang^="zh"] body {
+  line-height: 1.78;
+}
+
+html[lang^="zh"] .code-folding-btn,
+html[lang^="zh"] button.dropdown-toggle {
+  position: relative;
+  min-width: 74px;
+  color: transparent !important;
+}
+
+html[lang^="zh"] .code-folding-btn::after,
+html[lang^="zh"] button.dropdown-toggle::after {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 12px;
+  line-height: 1;
+}
+
+html[lang^="zh"] .code-folding-btn::after {
+  content: "显示代码";
+}
+
+html[lang^="zh"] .code-folding-btn[aria-expanded="true"]::after {
+  content: "隐藏代码";
+}
+
+html[lang^="zh"] button.dropdown-toggle::after {
+  content: "代码 ▾";
+}
+
+.main-container {
+  max-width: 1160px;
+  padding: 0 clamp(1rem, 3vw, 2.25rem) 4rem;
+}
+
+.vlab-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: fit-content;
+  margin: 1.5rem 0 0.65rem;
+  color: var(--guide-navy);
+  font-weight: 800;
+  letter-spacing: 0.085em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.vlab-brand:hover {
+  color: var(--guide-teal-dark);
+  text-decoration: none;
+}
+
+.vlab-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--guide-navy), var(--guide-teal));
+  border-radius: 9px;
+  box-shadow: 0 5px 14px rgba(23, 50, 77, 0.18);
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.vlab-name {
+  font-size: 0.9rem;
+}
+
+.vlab-brand + #header {
+  margin-top: 0.65rem;
+}
+
+#header {
+  margin: 1.5rem 0 2.25rem;
+  padding: clamp(1.5rem, 4vw, 2.8rem);
+  color: #fff;
+  background: linear-gradient(135deg, var(--guide-navy), var(--guide-teal));
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(23, 50, 77, 0.14);
+}
+
+#header h1,
+#header h3,
+#header h4,
+#header .author,
+#header .date {
+  color: #fff;
+}
+
+#header h1 {
+  margin-top: 0;
+  font-size: clamp(2.05rem, 5vw, 3.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+#header .subtitle {
+  max-width: 760px;
+  margin-top: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.94;
+}
+
+#header .author,
+#header .date {
+  display: inline-block;
+  margin: 0.45rem 1rem 0 0;
+  font-size: 13px;
+  opacity: 0.86;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--guide-navy);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h2 {
+  margin-top: 3.1rem;
+  padding-bottom: 0.48rem;
+  border-bottom: 2px solid var(--guide-line);
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+p,
+li {
+  max-width: 78ch;
+}
+
+a {
+  color: #075ea8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #034779;
+}
+
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--guide-focus);
+  outline-offset: 3px;
+}
+
+.language-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin: -0.75rem 0 1rem;
+  font-size: 14px;
+}
+
+.language-switch a,
+.language-switch span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0.38rem 0.9rem;
+  border: 1px solid var(--guide-line);
+  border-radius: 999px;
+  background: #fff;
+  text-decoration: none;
+}
+
+.language-switch .language-option.active {
+  color: #fff;
+  background: var(--guide-teal);
+  border-color: var(--guide-teal);
+  font-weight: 750;
+}
+
+.language-switch .language-home {
+  margin-right: auto;
+  color: var(--guide-navy);
+  font-weight: 700;
+}
+
+.language-switch .language-github {
+  color: var(--guide-teal-dark);
+  font-weight: 700;
+}
+
+.term-note,
+.workflow-box,
+.warning-box,
+.tip-box {
+  max-width: 82ch;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 3px 12px rgba(23, 50, 77, 0.035);
+}
+
+table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.3rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+}
+
+th {
+  color: var(--guide-navy);
+  background: var(--guide-teal-pale);
+}
+
+th,
+td {
+  padding: 0.7rem 0.78rem !important;
+  vertical-align: top !important;
+}
+
+caption {
+  color: var(--guide-muted);
+  font-weight: 650;
+  text-align: left;
+}
+
+pre {
+  max-height: 34rem;
+  overflow: auto;
+  border: 1px solid #d6e0e6;
+  border-radius: 8px;
+}
+
+code {
+  color: #7a2431;
+}
+
+.figure {
+  margin: 1.5rem 0 2rem;
+}
+
+.figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+p.caption {
+  color: var(--guide-muted);
+  font-size: 14px;
+}
+
+.tocify {
+  border: 1px solid var(--guide-line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.tocify .list-group-item.active {
+  color: #fff;
+  background: var(--guide-teal);
+  border-color: var(--guide-teal);
+}
+
+.nav-tabs > li > a {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .language-switch {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+
+  .language-switch .language-home {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .row > .col-xs-12.col-sm-4.col-md-3 {
+    display: none;
+  }
+
+  .toc-content {
+    float: none;
+    width: 100% !important;
+  }
+
+  #header {
+    border-radius: 12px;
+  }
+
+  .main-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  body {
+    color: #111;
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  #header {
+    color: var(--guide-ink);
+    background: #fff;
+    border: 2px solid var(--guide-navy);
+    box-shadow: none;
+  }
+
+  #header h1,
+  #header h3,
+  #header h4,
+  #header .author,
+  #header .date {
+    color: var(--guide-navy);
+  }
+
+  .vlab-brand {
+    color: #111;
+  }
+
+  .vlab-mark {
+    color: #fff;
+    background: var(--guide-navy);
+    box-shadow: none;
+  }
+
+  .tocify-wrapper,
+  .btn,
+  .code-folding-btn,
+  .nav-tabs,
+  .language-switch {
+    display: none !important;
+  }
+
+  .tab-content > .tab-pane {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  pre,
+  table,
+  figure,
+  .term-note,
+  .workflow-box,
+  .warning-box,
+  .tip-box {
+    break-inside: avoid;
+  }
+}
