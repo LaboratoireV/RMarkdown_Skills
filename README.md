@@ -4,11 +4,11 @@ A learning website for R Markdown beginners and data-analysis learners. The guid
 
 ## Live website
 
-Visit the [R Markdown Learning Hub](https://laboratoirev.github.io/RMarkdown_Skills/) and open the guide.
+Visit the [R Markdown Learning Hub](https://the-v-lab.github.io/RMarkdown_Skills/) and open the guide.
 
 ## Guides
 
-- [Guide](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_en.html) — a practical introduction to R Markdown, `knitr`, and `kable()`.
+- [Guide](https://the-v-lab.github.io/RMarkdown_Skills/r_markdown_guide_en.html) — a practical introduction to R Markdown, `knitr`, and `kable()`.
 
 ## What you will learn
 
@@ -59,4 +59,4 @@ The `.Rmd` source files remain in the local working copy and are excluded by `.g
 
 GitHub Pages publishes the site from the `main` branch at:
 
-<https://laboratoirev.github.io/RMarkdown_Skills/>
+<https://the-v-lab.github.io/RMarkdown_Skills/>
