@@ -28,40 +28,11 @@ body {
   line-height: 1.68;
 }
 
-html[lang^="zh"] body {
-  line-height: 1.78;
-}
 
-html[lang^="zh"] .code-folding-btn,
-html[lang^="zh"] button.dropdown-toggle {
-  position: relative;
-  min-width: 74px;
-  color: transparent !important;
-}
 
-html[lang^="zh"] .code-folding-btn::after,
-html[lang^="zh"] button.dropdown-toggle::after {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
-  font-size: 12px;
-  line-height: 1;
-}
 
-html[lang^="zh"] .code-folding-btn::after {
-  content: "显示代码";
-}
 
-html[lang^="zh"] .code-folding-btn[aria-expanded="true"]::after {
-  content: "隐藏代码";
-}
 
-html[lang^="zh"] button.dropdown-toggle::after {
-  content: "代码 ▾";
-}
 
 .main-container {
   max-width: 1160px;

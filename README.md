@@ -1,17 +1,14 @@
 # The V Lab R Markdown Learning Hub
 
-[English](README.md) | [简体中文](README.zh-CN.md)
-
-A bilingual learning website for R Markdown beginners and data-analysis learners. The guides explain how to combine narrative, R code, computed results, plots, and tables in reproducible reports, with detailed coverage of `knitr` and `knitr::kable()`.
+A learning website for R Markdown beginners and data-analysis learners. The guides explain how to combine narrative, R code, computed results, plots, and tables in reproducible reports, with detailed coverage of `knitr` and `knitr::kable()`.
 
 ## Live website
 
-Visit the [R Markdown Learning Hub](https://laboratoirev.github.io/RMarkdown_Skills/) and choose either the English or Chinese guide.
+Visit the [R Markdown Learning Hub](https://laboratoirev.github.io/RMarkdown_Skills/) and open the guide.
 
 ## Guides
 
-- [English guide](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_en.html) — a practical introduction to R Markdown, `knitr`, and `kable()`.
-- [中文教程](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_zh.html) — a complete Chinese guide to the same topics.
+- [Guide](https://laboratoirev.github.io/RMarkdown_Skills/r_markdown_guide_en.html) — a practical introduction to R Markdown, `knitr`, and `kable()`.
 
 ## What you will learn
 
@@ -28,9 +25,8 @@ Visit the [R Markdown Learning Hub](https://laboratoirev.github.io/RMarkdown_Ski
 
 | Path | Purpose |
 |---|---|
-| `index.html` | Bilingual learning-hub homepage |
-| `r_markdown_guide_en.html` | Self-contained English tutorial |
-| `r_markdown_guide_zh.html` | Self-contained Chinese tutorial |
+| `index.html` | Learning-hub homepage |
+| `r_markdown_guide_en.html` | Self-contained tutorial |
 | `styles.css` | Responsive homepage styles |
 | `guide-styles.css` | Shared reading, table-of-contents, and print styles for both guides |
 | `includes/vlab-brand.html` / `includes/vlab-footer.html` | Shared The V Lab header and footer used while rendering the guides |
